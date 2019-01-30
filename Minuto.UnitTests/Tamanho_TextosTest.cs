@@ -25,6 +25,7 @@ namespace Minuto.UnitTests
         {
             Assert.IsTrue(10 == _channels.Count);
         }
+
         [TestMethod]
         public void QtdeTextoTitulo_Test()
         {

@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 
 namespace Minuto.Domain.Entities.Base
 {
@@ -8,8 +7,8 @@ namespace Minuto.Domain.Entities.Base
     {
         public EntityBase()
         {
-            Id = System.Guid.NewGuid().ToString();
+            Id = Guid.NewGuid().ToString();
         }
-        public string Id { get; set; }
+        public string Id { private get; set; }
     }
 }

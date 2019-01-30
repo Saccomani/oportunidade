@@ -24,7 +24,7 @@ namespace Minuto.Angular.Api
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 
-
+            //can put this on ioc project
           services.AddScoped<IChannelRepository, ChannelRepository>();
 
             // In production, the Angular files will be served from this directory

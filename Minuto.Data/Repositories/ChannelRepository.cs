@@ -4,9 +4,7 @@ using Minuto.Data.Repositories.Base;
 using Minuto.Domain.Entities;
 using Minuto.Domain.Interfaces;
 using System.Net.Http;
-using System.Threading.Tasks;
 using System.Linq;
-using System.Resources;
 using System.Text.RegularExpressions;
 using Minuto.Infra.CrossCutting.Helpers;
 

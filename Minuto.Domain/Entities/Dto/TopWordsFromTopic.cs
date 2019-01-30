@@ -12,6 +12,4 @@ namespace Minuto.Domain.Entities.Dto
             this.Words = new List<TopWord>();
         }
     }
-
-  
 }

@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Class1.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Repositories\" />
+    <Folder Include="Repositories\Base\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="MockData\feed.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Minuto.Domain\Minuto.Domain.csproj" />
+    <ProjectReference Include="..\Minuto.Infra.CrossCutting\Minuto.Infra.CrossCutting.csproj" />
+  </ItemGroup>
+</Project>

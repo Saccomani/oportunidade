@@ -1,0 +1,72 @@
+<div class="row">
+  <div class="col-sm-6">
+      <h3>Api rest with angular 6 and part of DDD</h3>
+      <small>Rafael Saccomani (r.saccomani@gmail.com) 30/01/2019 </small>
+  </div>
+  <div class="col-sm-6">
+    <img  style=" float:right;margin-top: 10px" src='https://static.minutoseguros.com.br/outros/logo-minuto.png'/>
+  </div>
+</div>
+<div *ngIf="!feeds">
+<h4>Efetuando busca dos feeds...</h4>
+</div>
+<div *ngIf="feeds">
+    <span>Total de palavras por tópico</span>
+    <div class="row" style="padding: 15px">
+        <div class="col-sm-12">
+            <table  class="table table-striped table-bordered table-sm row-border hover">
+                <thead>
+                  <tr>
+                    <th>Titulo</th>
+                    <th>Total sem preposição</th>
+                    <th>Com preposição</th>
+
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let a of feeds">
+                    <td>
+                        {{ a.title | uppercase }}
+                    </td>
+                    <td>
+                        {{a.wordsWithoutPreposicoes.length}}
+                    </td>
+                    <td>
+                        {{a.description.length}}
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+        </div>
+
+
+        <div class="row" style="padding: 15px">
+            <div class="col-sm-12">
+
+              <ul class="list-group">
+                <li *ngFor="let a of topWords" class="list-group-item">{{ a.title | uppercase }}
+                  <table  class="table table-striped table-bordered table-sm row-border hover">
+                      <thead>
+                        <tr>
+                          <th>Palavra</th>
+                          <th>Ocorrências</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr *ngFor="let top of a.words">
+                          <td>
+                              {{top.word | uppercase}}
+                          </td>
+                          <td>
+                              {{top.count}}
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                </li>
+
+              </ul>
+            </div>
+
+</div>
+

@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Class1.cs" />
+    <Compile Remove="Entities\Feed.cs" />
+    <Compile Remove="Entities\Link.cs" />
+    <Compile Remove="Entities\Guid.cs" />
+    <Compile Remove="Entities\Item.cs" />
+    <Compile Remove="Entities\Rss.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Interfaces\" />
+    <Folder Include="Entities\" />
+    <Folder Include="Entities\Base\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Minuto.Infra.CrossCutting\Minuto.Infra.CrossCutting.csproj" />
+  </ItemGroup>
+</Project>
